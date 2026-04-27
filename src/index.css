@@ -4,75 +4,79 @@
 @tailwind components;
 @tailwind utilities;
 
-/* L'artigelato — artisan gelato design system. All HSL. */
+/* L'artigelato — artisan gelato design system. All HSL.
+   Brand inspired by the AG sign: soft pastel teal on warm ivory. */
 
 @layer base {
   :root {
-    /* Warm cream backdrop */
-    --background: 36 40% 97%;
-    --foreground: 25 30% 14%;
+    /* Warm ivory backdrop (matches shop interior cream walls) */
+    --background: 38 45% 96%;
+    --foreground: 200 35% 16%;
 
-    --card: 36 40% 99%;
-    --card-foreground: 25 30% 14%;
+    --card: 38 45% 99%;
+    --card-foreground: 200 35% 16%;
 
-    --popover: 36 40% 99%;
-    --popover-foreground: 25 30% 14%;
+    --popover: 38 45% 99%;
+    --popover-foreground: 200 35% 16%;
 
-    /* Pistachio green — signature */
-    --primary: 92 32% 38%;
-    --primary-foreground: 36 40% 97%;
-    --primary-glow: 92 38% 58%;
+    /* Signature pastel teal — the AG sign color */
+    --primary: 188 45% 62%;
+    --primary-foreground: 200 50% 14%;
+    --primary-glow: 188 60% 78%;
 
-    /* Soft strawberry rose */
+    /* Soft strawberry rose (Instagram strawberry cups) */
     --secondary: 8 60% 88%;
     --secondary-foreground: 12 50% 28%;
 
-    --muted: 36 25% 92%;
-    --muted-foreground: 25 15% 42%;
+    --muted: 38 30% 92%;
+    --muted-foreground: 200 12% 38%;
 
-    /* Caramel */
+    /* Warm caramel accent */
     --accent: 28 55% 62%;
-    --accent-foreground: 25 40% 14%;
+    --accent-foreground: 200 40% 14%;
 
     --destructive: 0 70% 52%;
-    --destructive-foreground: 36 40% 97%;
+    --destructive-foreground: 38 45% 96%;
 
-    --border: 32 22% 86%;
-    --input: 32 22% 86%;
-    --ring: 92 32% 38%;
+    --border: 188 20% 85%;
+    --input: 188 20% 85%;
+    --ring: 188 45% 62%;
 
     --radius: 1rem;
 
     /* Brand semantic extras */
-    --pistachio: 92 32% 38%;
+    --teal: 188 45% 62%;
+    --teal-deep: 195 50% 32%;
+    --pistachio: 92 32% 48%;
     --strawberry: 8 70% 64%;
     --chocolate: 22 35% 22%;
     --vanilla: 42 65% 88%;
     --caramel: 28 55% 62%;
+    --whatsapp: 142 70% 45%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(36 40% 97% / 0.2), hsl(25 40% 14% / 0.55));
-    --gradient-cream: linear-gradient(180deg, hsl(36 40% 97%), hsl(36 35% 93%));
-    --gradient-pistachio: linear-gradient(135deg, hsl(92 32% 38%), hsl(92 38% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(38 45% 96% / 0.2), hsl(200 50% 14% / 0.6));
+    --gradient-cream: linear-gradient(180deg, hsl(38 45% 96%), hsl(188 30% 93%));
+    --gradient-teal: linear-gradient(135deg, hsl(188 45% 62%), hsl(188 60% 78%));
     --gradient-warm: linear-gradient(135deg, hsl(28 55% 62%), hsl(8 70% 74%));
 
     /* Shadows */
-    --shadow-soft: 0 10px 30px -12px hsl(25 30% 14% / 0.18);
-    --shadow-warm: 0 20px 60px -20px hsl(28 55% 42% / 0.35);
-    --shadow-card: 0 4px 20px -8px hsl(25 30% 14% / 0.12);
+    --shadow-soft: 0 10px 30px -12px hsl(200 35% 16% / 0.18);
+    --shadow-warm: 0 20px 60px -20px hsl(188 50% 32% / 0.35);
+    --shadow-card: 0 4px 20px -8px hsl(200 35% 16% / 0.12);
 
     /* Motion */
     --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
     --transition-base: all 0.4s var(--ease-soft);
 
-    --sidebar-background: 36 40% 97%;
-    --sidebar-foreground: 25 30% 14%;
-    --sidebar-primary: 92 32% 38%;
-    --sidebar-primary-foreground: 36 40% 97%;
-    --sidebar-accent: 36 25% 92%;
-    --sidebar-accent-foreground: 25 30% 14%;
-    --sidebar-border: 32 22% 86%;
-    --sidebar-ring: 92 32% 38%;
+    --sidebar-background: 38 45% 96%;
+    --sidebar-foreground: 200 35% 16%;
+    --sidebar-primary: 188 45% 62%;
+    --sidebar-primary-foreground: 200 50% 14%;
+    --sidebar-accent: 38 30% 92%;
+    --sidebar-accent-foreground: 200 35% 16%;
+    --sidebar-border: 188 20% 85%;
+    --sidebar-ring: 188 45% 62%;
   }
 }
 
@@ -111,9 +115,13 @@
   .bg-gradient-cream {
     background: var(--gradient-cream);
   }
-  .bg-gradient-pistachio {
-    background: var(--gradient-pistachio);
+  .bg-gradient-teal {
+    background: var(--gradient-teal);
   }
+  .bg-gradient-pistachio {
+    background: var(--gradient-teal);
+  }
+  [dir="rtl"] .flip-rtl { transform: scaleX(-1); }
   .bg-gradient-warm {
     background: var(--gradient-warm);
   }
