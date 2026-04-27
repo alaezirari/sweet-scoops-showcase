@@ -1,6 +1,31 @@
 export type Lang = "en" | "fr" | "ar";
 
-export const translations = {
+interface Translation {
+  nav: { flavors: string; story: string; menu: string; visit: string; call: string; home: string };
+  hero: { tagline: string; title: string; titleEm: string; titleAfter: string; sub: string; cta1: string; cta2: string };
+  stats: { rating: string; reviews: string; flavors: string; made: string };
+  flavors: { kicker: string; title: string; viewAll: string };
+  story: { kicker: string; title: string; p1: string; p2: string; p3: string };
+  menuSection: { kicker: string; title: string; sub: string; cta: string };
+  reviews: { kicker: string; title: string };
+  visit: {
+    kicker: string; title: string; sub: string; directions: string;
+    address: string; addressLine1: string; addressLine2: string; addressLine3: string;
+    hours: string; hoursLine1: string; hoursLine2: string; reservations: string;
+  };
+  whatsapp: string;
+  footer: { tagline: string; made: string };
+  menuPage: {
+    title: string; sub: string; back: string;
+    categories: { gelato: string; sorbet: string; coupes: string; crepes: string; waffles: string; drinks: string };
+    sizes: { single: string; double: string; triple: string };
+    currency: string; note: string;
+  };
+}
+
+export type { Translation };
+
+export const translations: Record<Lang, Translation> = {
   en: {
     nav: { flavors: "Flavors", story: "Story", menu: "Menu", visit: "Visit", call: "Call us", home: "Home" },
     hero: {
