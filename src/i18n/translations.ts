@@ -206,6 +206,5 @@ export const translations: Record<Lang, Translation> = {
       note: "الأسعار بالدرهم المغربي. القائمة قد تتغير حسب الموسم.",
     },
   },
-} as const;
+};
 
-export type Translation = typeof translations.en;
